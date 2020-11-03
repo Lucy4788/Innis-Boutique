@@ -1,0 +1,499 @@
+body{
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+}
+header #mobile{
+    display: none;
+}
+
+/*---------------------------------Header Style-------------------------------------*/
+#desktop{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+#desktop .nav-bar-items{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 30%;
+}
+#desktop .nav-bar-items a{
+    text-decoration: none;
+    color: black;
+}
+#desktop .nav-bar-items p{
+    transition: all 300ms ease-in-out 0.14s;
+}
+#desktop .nav-bar-items p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#desktop h1{
+    margin: 10px;
+    font-size: 30px;
+}
+#desktop .sub-nav-bar i{
+    margin: 7px;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out 0.14s;
+}
+#desktop .sub-nav-bar i:hover{
+    color: #c55f46;
+    cursor: pointer;
+}
+@media only screen and (max-width: 450px){
+    header #desktop{
+        display: none;
+    }
+    header #mobile{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+    }
+    header #mobile i{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    header #mobile h2{
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+/*---------------------------------Banner Style-------------------------------------*/
+.banner{
+    background-image: url("./media/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 47em;
+}
+.banner p, 
+.banner button{
+    position: relative; 
+}
+
+.banner p{
+    text-align: center;
+    font-size: 6em;
+    font-weight: 800;
+    color: white;
+    top: 190px;
+    margin: 0 40px;
+
+}
+.banner button{
+    display: block;
+    margin: 0 auto;
+    top: 205px;
+    color: white;
+    font-size: 18px;
+    padding: 20px 25px;
+    border: 1px solid transparent;
+    font-family: 'Dosis', sans-serif;
+    background-color:hsla(110, 48%, 22%, 0.7);
+    transition: all 300ms ease-in-out 0.14s;
+}
+.banner button:hover{
+    background-color:  hsla(12, 52%, 52%, 0.7);
+    cursor: pointer;
+    color: black;
+}
+@media only screen and (max-width: 450px){
+    .banner p{
+        font-size: 2.5em;
+    }
+    .banner{
+        background-position: left;
+    }
+}
+/*---------------------------------Favourite Style-------------------------------------*/
+.favourite{
+    position: relative;
+    top: 50px;
+}
+.favourite h2,
+.favourite p{
+    text-align: center;
+}
+.favourite h2{
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.favourite p{
+    margin-top: 25px;
+    font-size: 18px;
+}
+.favourite-grid {
+    display: grid;
+    width: 100%;
+    height: 400px;
+    grid-template: 500px / repeat(3, 1fr);
+    margin-top: 50px;
+    grid-gap: 0;
+}
+.favourite-grid .fav{
+    justify-self: center; /*Align the grid items inside the grid container*/
+}
+.fav img { 
+    width: 300px;
+    height: 370px;
+    transition: all 300ms ease-in-out 0.14s; 
+}
+.fav img:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.fav p{
+    justify-items: center; /*Align the items INSIDE the grid items*/
+    font-weight: 700;
+}
+@media only screen and (max-width: 450px){
+    .favourite h2{
+        font-size: 30px;   
+        max-width: 350px;    
+    }
+    .favourite p{
+        font-size: 15px;
+        max-width: 350px;
+    }
+    .fav img{
+        width: 250px;
+        height: 300px;
+    }
+    .favourite-grid {
+        display: flex;
+        flex-flow: row wrap;
+        height: 1000px;
+        max-width: 340px;
+        align-content: space-around;
+        justify-content: center;
+    }
+    .fav p{
+        margin-top: 0;
+    }
+}
+
+/*---------------------------------Break-------------------------------------*/
+.break img{
+    margin-top: 0px;
+    display: block;
+    height: 650px;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    transition: all 300ms ease-in-out 0.14s; 
+}
+.break img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+@media only screen and (max-width: 450px){
+    .break img{
+       height: 350px;
+       top: 40px;
+       display: block;
+    }
+}
+/*---------------------------------Journal-------------------------------------*/
+.journal{
+    position: relative;
+    top: 100px;
+}
+.journal h2{
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.journal-flexbox{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 900px;
+}
+.journal-flexbox img{
+    width: 562px;
+    height: 600px;
+    justify-self: space-around;
+    transition: all 300ms ease-in-out 0.14s; 
+}
+.journal-flexbox img:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.journal-flexbox p{
+    text-align: left;
+}
+.article{
+    align-self: center;
+    width: 45%;
+}
+.article p,
+.article h3{
+    text-align: center;
+}
+.article button {
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    background-color: hsla(110, 48%, 22%, 0.7);
+    margin: 0 auto;
+    display: block;
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    transition: all 300ms ease-in-out 0.14s; 
+}
+.article button:hover{
+    background-color: #DAC09D; 
+    cursor: pointer;
+    color: black;
+}
+@media only screen and (max-width: 450px){
+    .journal{
+     max-width: 450px;
+     top: 70px;
+    }
+    .journal h2{
+        margin-top: 0;
+        padding-left: 12px;
+    }
+    .journal-flexbox{
+        display: flex;
+        flex-flow: row-reverse wrap;
+        align-content: space-around;
+        justify-content: center;
+        max-width: 370px;
+        height: 900px;
+    }
+    .journal-flexbox img{
+        width: 260px;
+        height: 250px;
+    }
+    .article{
+        align-self: center;
+        width: 70%;
+    }
+    .description h3{
+        font-size: 15px;
+    }
+    .description p,
+    .article button {
+        font-size: 12px;
+    }
+}
+/*---------------------------------Subscription-------------------------------------*/
+.subscribe{
+    position: relative;
+    top: 100px;
+    background-image: url("./media/subscribe.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding-top: 200px;
+    padding-left: 20px;
+}
+.subscribe .email{
+    padding-top: 10px;
+}
+.subscribe .email input,
+.subscribe .email button{
+    padding: 10px 20px;
+    border: 1px solid transparent;
+}
+.subscribe .email button{
+    transition: all 300ms ease-in-out 0.14s; 
+    background-color: hsla(110, 48%, 22%, 0.7);
+    color: white;
+}
+.subscribe .email button:hover{
+    cursor: pointer;
+    background-color:#DAC09D; 
+    color: black;
+}
+
+.subscribe h2,
+.subscribe p{
+    text-align: left;
+}
+@media only screen and (max-width: 450px){
+    .subscribe{
+        height: 150px;
+        padding-top: 75px;
+        padding-bottom: 50px;
+        padding-right: 120px;
+    
+    }
+}
+/*---------------------------------Gift card-------------------------------------*/
+.promotion-mobile{
+    display: none;
+}
+.promotion-flexbox{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 800px;
+    justify-content: space-around;
+    top: 100px;
+    position: relative;
+}
+.promotion{
+    width: 35%;
+    height: 550px;
+    align-self: center;
+}
+.a{
+    background-image: url("./media/gift-card-1.jpeg");
+    background-size: cover;
+}
+.a h3{
+    position: relative;
+    top: 180px;
+    text-align: center;
+    font-size: 3.5em;
+}
+.b h3{
+    font-size: 40px;
+    margin-top: 0;
+}
+.b p{   
+    text-align: left;
+    font-size: 14px;
+    line-height: 2;
+}
+.b{
+    position: relative;
+    top: 150px;
+}
+.b button{
+    padding: 15px 30px;
+    margin-top: 15px;
+    border: 1px solid transparent;
+    background-color: hsla(110, 48%, 22%, 0.7);
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    transition: all 300ms ease-in-out 0.14s;
+}
+.b button:hover{
+    background-color: #DAC09D;
+    color: black;
+    cursor: pointer;
+}
+@media only screen and (max-width: 450px){
+    .promote .promotion-flexbox{
+        display: none;
+    }
+    .promote .promotion-mobile{
+        display: inline;
+        position: relative;
+        top: 100px;
+    }
+    .promotion-mobile p,
+    .promotion-mobile h3{
+        text-align: center;
+        max-width: 450px;
+    }
+    .promotion-mobile h3{
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    .promotion-mobile button{
+        display: block;
+        margin: 0 auto;
+        padding: 15px 30px;
+        margin-top: 30px;
+        border: 1px solid transparent;
+        background-color: hsla(110, 48%, 22%, 0.7);
+        color: white;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: inherit;
+        transition: all 300ms ease-in-out 0.14s;
+    }
+    .promotion-mobile button:hover{
+        background-color: #DAC09D;
+        color: black;
+        cursor: pointer;
+    }
+    .promotion-mobile p{   
+        font-size: 13px;
+        line-height: 2;
+    }
+}
+/*---------------------------------Footer-------------------------------------*/
+footer{
+    width: 100%;
+    height: 200px;
+    margin-top: 0px;
+    position: relative;
+    top: 130px;
+    background-color: #32391D;
+}
+footer .copyright,
+.disclaimer{
+    color: white;
+}
+.copyright{
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.copyright h2{
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 40px;
+}
+.copyright p{
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.social i,
+.contak i{
+    font-size: 12px;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 0;
+    margin-left: 10px;
+    transition: all 300ms ease-in-out 0.14s;
+}
+.social i:hover,
+.contak i:hover{
+    cursor: pointer;
+    color: lightseagreen;
+}
+.disclaimer p{
+    margin: 50px 20px;
+    font-size: 10px;
+}
+.disclaimer p a{
+    color: lightseagreen;
+    text-decoration: none;
+}
+@media only screen and (max-width: 450px){
+    footer{
+        top: 250px;
+    }
+    .copyright p{
+        font-size: 12px;
+    }
+    .copyright h2{
+        font-size: 30px;
+        margin-top: 35px;
+    }
+    .social i{
+        padding: 5px 10px;
+    }
+}
